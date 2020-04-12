@@ -15,8 +15,6 @@
 </html>
 
 
-
-
 <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 
 <script type='text/javascript'>
@@ -60,24 +58,46 @@
       restaurantElement.appendChild(restaurantPhone);
 
       restaurantWebsite = document.createElement("address");
+      restaurantLink = document.createElement("a");
       restaurantWebsite.classList.add('business-card__website');
+      restaurantWebsite.appendChild(restaurantLink);
       restaurantElement.appendChild(restaurantWebsite);
 
       restaurantOptions = document.createElement("div");
       restaurantOptions.classList.add('business-card__options');
       restaurantElement.appendChild(restaurantOptions);
 
+      restaurantIcon1 = document.createElement("img");
+      restaurantIcon1.setAttribute('class', 'service-icon');
+      restaurantIcon2 = document.createElement("img");
+      restaurantIcon2.setAttribute('class', 'service-icon');
+      restaurantIcon3 = document.createElement("img");
+      restaurantIcon3.setAttribute('class', 'service-icon');
+      restaurantIcon4 = document.createElement("img");
+      restaurantIcon4.setAttribute('class', 'service-icon');
+      restaurantElement.appendChild(restaurantIcon1);
+      restaurantElement.appendChild(restaurantIcon2);
+      restaurantElement.appendChild(restaurantIcon3);
+      restaurantElement.appendChild(restaurantIcon4);
+
       restaurantlist.appendChild(restaurantElement);
       restaurantName.innerHTML = data.Restaurant;
       restaurantPhone.innerHTML = data.Phone;
-      restaurantWebsite.innerHTML = data.Y;
+      restaurantLink.innerHTML = data.Y;
+      restaurantLink.href = data.Y;
       restaurantOptions.innerHTML = data['Takeout/ Delivery'];
-      // takeoutDelivery.innerHTML = data['Takeout/ Delivery'];
-      // kickbackAVL.innerHTML = data['KickbackAVL'];
-      // takeoutCentral.innerHTML = data['Takeout Central'];
-      // chowNow.innerHTML = data['Chow Now'];
-      // doordash.innerHTML = data['DoorDash'];
-
+      if (data['KickbackAVL'] == "Y") {
+        restaurantIcon1.src = "assets/kickback.png";
+      }
+      if (data['Takeout Central'] == "Y") {
+        restaurantIcon2.src = "assets/takoutcentral.png";
+      }
+      if (data['Chow Now'] == "Y") {
+        restaurantIcon3.src = "assets/chownow.png";
+      }
+      if (data['DoorDash']) {
+        restaurantIcon4.src = "assets/doordash-300.png";
+      }
     });
   }
 

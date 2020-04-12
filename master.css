@@ -1,0 +1,34 @@
+#restaurantlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100%;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+.business-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+  height: 5rem;
+  background-color: floralwhite;
+  margin: 2rem;
+  padding: 1rem;
+  /* border: 2px solid floralwhite; */
+  outline: 2px solid floralwhite;
+  outline-offset: 10px;
+}
+
+.business-card * {
+
+  font-size: 10pt;
+  color: #444444;
+}
+
+.business-card__name {
+  text-transform: uppercase;
+}

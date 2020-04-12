@@ -67,18 +67,13 @@
       restaurantOptions.classList.add('business-card__options');
       restaurantElement.appendChild(restaurantOptions);
 
-      restaurantIcon1 = document.createElement("img");
-      restaurantIcon1.setAttribute('class', 'service-icon');
-      restaurantIcon2 = document.createElement("img");
-      restaurantIcon2.setAttribute('class', 'service-icon');
-      restaurantIcon3 = document.createElement("img");
-      restaurantIcon3.setAttribute('class', 'service-icon');
-      restaurantIcon4 = document.createElement("img");
-      restaurantIcon4.setAttribute('class', 'service-icon');
-      restaurantElement.appendChild(restaurantIcon1);
-      restaurantElement.appendChild(restaurantIcon2);
-      restaurantElement.appendChild(restaurantIcon3);
-      restaurantElement.appendChild(restaurantIcon4);
+      restaurantIconContainer = document.createElement("div");
+      restaurantIconContainer.classList.add('icon-container');
+
+
+
+
+      restaurantElement.appendChild(restaurantIconContainer);
 
       restaurantlist.appendChild(restaurantElement);
       restaurantName.innerHTML = data.Restaurant;
@@ -87,16 +82,28 @@
       restaurantLink.href = data.Y;
       restaurantOptions.innerHTML = data['Takeout/ Delivery'];
       if (data['KickbackAVL'] == "Y") {
+        restaurantIcon1 = document.createElement("img");
+        restaurantIcon1.setAttribute('class', 'service-icon');
         restaurantIcon1.src = "assets/kickback.png";
+        restaurantIconContainer.appendChild(restaurantIcon1);
       }
       if (data['Takeout Central'] == "Y") {
+        restaurantIcon2 = document.createElement("img");
+        restaurantIcon2.setAttribute('class', 'service-icon');
         restaurantIcon2.src = "assets/takoutcentral.png";
+        restaurantIconContainer.appendChild(restaurantIcon2);
       }
       if (data['Chow Now'] == "Y") {
+        restaurantIcon3 = document.createElement("img");
+        restaurantIcon3.setAttribute('class', 'service-icon');
         restaurantIcon3.src = "assets/chownow.png";
+        restaurantIconContainer.appendChild(restaurantIcon3);
       }
       if (data['DoorDash']) {
+        restaurantIcon4 = document.createElement("img");
+        restaurantIcon4.setAttribute('class', 'service-icon');
         restaurantIcon4.src = "assets/doordash-300.png";
+        restaurantIconContainer.appendChild(restaurantIcon4);
       }
     });
   }

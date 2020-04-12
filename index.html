@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="restaurantlist">
+  </div>
+
+</body>
+</html>
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+<script type='text/javascript'>
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1HoSDm8dTg_2EwStu6wUoM8_ORURhIpOSnISFtB7CIIk/edit?usp=sharing';
+
+  function init() {
+    Tabletop.init( {
+      key: publicSpreadsheetUrl,
+      callback: showInfo,
+      simpleSheet: true
+    } )
+  }
+
+  // function getRandomHex() {
+  //   var letters = '0123456789ABCDEF'.split('');
+  //   var color = '#';
+  //   for (var i = 0; i < 6; i++) {
+  //     color += letters[Math.floor(Math.random() * 16)];
+  //   }
+  //
+  //   return color;
+  // }
+
+  function showInfo(data, tabletop) {
+    console.log(data);
+    data.forEach(function(data) {
+      // debugger
+      restaurantElement = document.createElement("div");
+      restaurantElement.classList.add('business-card');
+      // restaurantElement.style.backgroundColor = getRandomHex();
+
+      restaurantName = document.createElement("div");
+      restaurantName.classList.add('business-card__name');
+      restaurantElement.appendChild(restaurantName);
+
+      restaurantNameText = document.createTextNode("");
+      restaurantName.appendChild(restaurantNameText);
+
+      restaurantPhone = document.createElement("address");
+      restaurantPhone.classList.add('business-card__phone');
+      restaurantElement.appendChild(restaurantPhone);
+
+      restaurantWebsite = document.createElement("address");
+      restaurantWebsite.classList.add('business-card__website');
+      restaurantElement.appendChild(restaurantWebsite);
+
+      restaurantOptions = document.createElement("div");
+      restaurantOptions.classList.add('business-card__options');
+      restaurantElement.appendChild(restaurantOptions);
+
+      restaurantlist.appendChild(restaurantElement);
+      restaurantName.innerHTML = data.Restaurant;
+      restaurantPhone.innerHTML = data.Phone;
+      restaurantWebsite.innerHTML = data.Y;
+      restaurantOptions.innerHTML = data['Takeout/ Delivery'];
+      // takeoutDelivery.innerHTML = data['Takeout/ Delivery'];
+      // kickbackAVL.innerHTML = data['KickbackAVL'];
+      // takeoutCentral.innerHTML = data['Takeout Central'];
+      // chowNow.innerHTML = data['Chow Now'];
+      // doordash.innerHTML = data['DoorDash'];
+
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+</script>

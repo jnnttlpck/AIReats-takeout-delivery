@@ -87,6 +87,12 @@
         restaurantIcon4.src = "assets/takeout.svg";
         restaurantIconContainer.appendChild(restaurantIcon4);
       }
+      if (data['Takeout/ Delivery'].includes('Delivery')) {
+        restaurantIcon5 = document.createElement('img');
+        restaurantIcon5.setAttribute('class', 'service-icon');
+        restaurantIcon5.src = 'assets/delivery.svg';
+        restaurantIconContainer.appendChild(restaurantIcon5);
+      }
       if (data['KickbackAVL'] == "Y") {
         restaurantIcon1Link = document.createElement("a");
         restaurantIcon1Link.href = 'https://www.kickbackavl.com';

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25.130655mm"
+   height="13.546666mm"
+   viewBox="0 0 25.130655 13.546666"
+   version="1.1"
+   id="svg3746"
+   inkscape:version="0.92.4 (fd57863, 2020-04-02)"
+   sodipodi:docname="delivery.svg">
+  <defs
+     id="defs3740" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-29.651875"
+     inkscape:cy="-328.6857"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3743">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-14.648963,-48.321909)">
+    <a
+       id="a3762">
+      <switch
+         id="switch10"
+         transform="matrix(0.26458333,0,0,0.26458333,13.987505,41.866076)">
+        <foreignObject
+           height="1"
+           width="1"
+           y="0"
+           x="0"
+           requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" />
+        <g
+           id="g8"
+           i:extraneous="self">
+          <g
+             id="g6">
+            <path
+               id="path2"
+               d="m 94.9,50.8 -9.4,-1.3 -3.8,-9.7 c -1,-2.6 -3.5,-4.2 -6.6,-4.2 H 64.2 c -0.9,0 -1.7,0.6 -1.8,1.5 L 58.8,57 c -0.2,0.9 -0.9,1.5 -1.8,1.5 H 9.2 c -0.9,0 -1.7,0.6 -1.8,1.5 l -1,5.7 c -0.2,1.1 0.7,2.2 1.8,2.2 h 3.9 c -0.4,4.3 2.6,7.7 6.9,7.7 4.3,0 8.6,-3.4 9.7,-7.7 h 43.5 c -0.4,4.3 2.6,7.7 6.9,7.7 4.4,0 8.6,-3.4 9.7,-7.7 h 4.7 c 0.9,0 1.7,-0.6 1.8,-1.5 L 97.4,54.5 C 97.8,52.6 96.7,51 94.9,50.8 Z m -70,16.4 c -0.4,2.4 -2.7,4.4 -5.2,4.4 -2.4,0 -4.1,-2 -3.6,-4.4 0.4,-2.4 2.7,-4.4 5.2,-4.4 2.4,0 4.1,2 3.6,4.4 z m 41.3,-18 1.5,-8.4 h 6.4 c 1.1,0 2.1,0.6 2.5,1.6 l 2.7,6.8 z m 18.8,18 c -0.4,2.4 -2.7,4.4 -5.2,4.4 -2.5,0 -4.1,-2 -3.6,-4.4 0.4,-2.4 2.7,-4.4 5.2,-4.4 2.5,0 4,2 3.6,4.4 z"
+               inkscape:connector-curvature="0" />
+            <path
+               id="path4"
+               d="m 56.6,54.3 4.9,-27.7 c 0.2,-1.1 -0.7,-2.2 -1.8,-2.2 H 12 c -1.7,0 -3.1,1.4 -3.1,3.1 v 0 c 0,1.7 1.4,3.1 3.1,3.1 h 0.5 4.7 c 1.7,0 3.1,1.4 3.1,3.1 0,1.7 -1.4,3.1 -3.1,3.1 H 8.8 c -1.7,0 -3.1,1.4 -3.1,3.1 v 0 c 0,1.7 1.4,3.1 3.1,3.1 H 14 c 1.7,0 3.1,1.4 3.1,3.1 0,1.7 -1.4,3.1 -3.1,3.2 H 5.6 c -1.7,0 -3.1,1.4 -3.1,3.1 v 0 c 0,1.7 1.4,3.1 3.1,3.1 h 49.1 c 1,0.4 1.8,-0.3 1.9,-1.2 z"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </switch>
+    </a>
+  </g>
+</svg>

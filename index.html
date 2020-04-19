@@ -81,6 +81,12 @@
       restaurantLink.innerHTML = data.Y;
       restaurantLink.href = data.Y;
       restaurantOptions.innerHTML = data['Takeout/ Delivery'];
+      if (data['Takeout/ Delivery'].includes('Takeout')) {
+        restaurantIcon4 = document.createElement("img");
+        restaurantIcon4.setAttribute('class', 'service-icon');
+        restaurantIcon4.src = "assets/takeout.svg";
+        restaurantIconContainer.appendChild(restaurantIcon4);
+      }
       if (data['KickbackAVL'] == "Y") {
         restaurantIcon1 = document.createElement("img");
         restaurantIcon1.setAttribute('class', 'service-icon');
@@ -105,6 +111,7 @@
         restaurantIcon4.src = "assets/doordash-300.png";
         restaurantIconContainer.appendChild(restaurantIcon4);
       }
+
     });
   }
 

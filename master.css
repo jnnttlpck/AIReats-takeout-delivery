@@ -1,7 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 20;
+}
+
+.header-1 {
+  color: floralwhite;
+  text-transform: uppercase;
+}
+#header-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: salmon;
+  width: 60%;
+  height: 100vh;
+  text-align: center;
+}
+
+#sub-header-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  width: 40%;
+  height: 100vh;
+  text-align: center;
+}
+
+#sub-header-box a.sub-header-box__link {
+  color: floralwhite;
+  font-size: 18pt;
+  letter-spacing: 2px;
+  margin: 2.5rem;
+}
+
 #restaurantlist {
+  padding-top: 4rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100vw;
   height: 100%;
   background-color: #FBAB7E;

@@ -81,35 +81,63 @@
       restaurantLink.innerHTML = data.Y;
       restaurantLink.href = data.Y;
       restaurantOptions.innerHTML = data['Takeout/ Delivery'];
-      if (data['Takeout/ Delivery'].includes('Takeout')) {
+      if (data['Takeout/ Delivery'].includes('Take')) {
         restaurantIcon4 = document.createElement("img");
         restaurantIcon4.setAttribute('class', 'service-icon');
         restaurantIcon4.src = "assets/takeout.svg";
         restaurantIconContainer.appendChild(restaurantIcon4);
       }
       if (data['KickbackAVL'] == "Y") {
+        restaurantIcon1Link = document.createElement("a");
+        restaurantIcon1Link.href = 'https://www.kickbackavl.com';
+        restaurantIcon1Link.title = 'Kickback AVL (Delivery)';
+        restaurantIcon1Link.setAttribute('class', 'icon-link');
+
         restaurantIcon1 = document.createElement("img");
         restaurantIcon1.setAttribute('class', 'service-icon');
         restaurantIcon1.src = "assets/kickback.png";
-        restaurantIconContainer.appendChild(restaurantIcon1);
+
+        restaurantIconContainer.appendChild(restaurantIcon1Link);
+        restaurantIcon1Link.appendChild(restaurantIcon1);
       }
       if (data['Takeout Central'] == "Y") {
+        restaurantIcon2Link = document.createElement("a");
+        restaurantIcon2Link.href = 'https://www.takeoutcentral.com/';
+        restaurantIcon2Link.title = 'Takeout Central (Delivery)';
+        restaurantIcon2Link.setAttribute('class', 'icon-link');
+
         restaurantIcon2 = document.createElement("img");
-        restaurantIcon2.setAttribute('class', 'service-icon');
         restaurantIcon2.src = "assets/takoutcentral.png";
-        restaurantIconContainer.appendChild(restaurantIcon2);
+        restaurantIcon2.setAttribute('class', 'service-icon');
+
+        restaurantIconContainer.appendChild(restaurantIcon2Link);
+        restaurantIcon2Link.appendChild(restaurantIcon2);
       }
       if (data['Chow Now'] == "Y") {
+        restaurantIcon3Link = document.createElement("a");
+        restaurantIcon3Link.href = 'https://eat.chownow.com';
+        restaurantIcon3Link.title = 'Chow Now';
+        restaurantIcon3Link.setAttribute('class', 'icon-link');
+
         restaurantIcon3 = document.createElement("img");
         restaurantIcon3.setAttribute('class', 'service-icon');
         restaurantIcon3.src = "assets/chownow.png";
-        restaurantIconContainer.appendChild(restaurantIcon3);
+
+        restaurantIconContainer.appendChild(restaurantIcon3Link);
+        restaurantIcon3Link.appendChild(restaurantIcon3);
       }
-      if (data['DoorDash']) {
+      if (data['DoorDash'] == "Y") {
+        restaurantIcon4Link = document.createElement("a");
+        restaurantIcon4Link.href = 'https://www.doordash.com/';
+        restaurantIcon4Link.title = 'Door Dash';
+        restaurantIcon4Link.setAttribute('class', 'icon-link');
+
         restaurantIcon4 = document.createElement("img");
         restaurantIcon4.setAttribute('class', 'service-icon');
         restaurantIcon4.src = "assets/doordash-300.png";
-        restaurantIconContainer.appendChild(restaurantIcon4);
+
+        restaurantIconContainer.appendChild(restaurantIcon4Link);
+        restaurantIcon4Link.appendChild(restaurantIcon4);
       }
 
     });

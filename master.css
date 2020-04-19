@@ -50,6 +50,30 @@
   margin: 3px;;
 }
 
+#icon-key {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10rem;
+  height: 25rem;
+  border: 2px darkgrey solid;
+  background-color: floralwhite;
+}
+
+#icon-key .icon-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon-info {
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.4rem;
+}
+
 a[title].icon-link:hover {
   position: relative;
 }

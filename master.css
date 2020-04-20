@@ -43,6 +43,11 @@
   margin: 2.5rem;
 }
 
+#body {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
 #restaurantlist {
   padding-top: 4rem;
   display: flex;
@@ -51,8 +56,6 @@
   justify-content: center;
   width: 100vw;
   height: 100%;
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
 
 .business-card {

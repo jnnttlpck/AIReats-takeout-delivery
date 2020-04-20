@@ -18,33 +18,41 @@
     </div>
   </div>
 
-  <div id="restaurantlist">
-  </div>
-  <div id="icon-key">
-    <div class="icon-info">
-      <img src="assets/takeout.svg" alt="" class="service-icon">
-      <p class="icon-title" id="takeout-key">Takeout</p>
+  <div id="body">
+    <div class="options">
+      <button id="show-delivery">Show Delivery Only</button>
+      <button id="show-takeout">Show Takeout Only</button>
     </div>
-    <div class="icon-info">
-      <img src="assets/delivery.svg" alt="" class="service-icon">
-      <p class="icon-title" id="delivery-key">Delivery</p>
+
+    <div id="restaurantlist"></div>
+
+    <div id="icon-key">
+      <div class="icon-info">
+        <img src="assets/takeout.svg" alt="" class="service-icon">
+        <p class="icon-title" id="takeout-key">Takeout</p>
+      </div>
+      <div class="icon-info">
+        <img src="assets/delivery.svg" alt="" class="service-icon">
+        <p class="icon-title" id="delivery-key">Delivery</p>
+      </div>
+      <div class="icon-info">
+        <img src="assets/kickback.png" alt="" class="service-icon">
+        <p class="icon-title" id="kickbackAVL-key">Kickback AVL</p>
+      </div>
+      <div class="icon-info">
+        <img src="assets/takoutcentral.png" alt="" class="service-icon">
+        <p class="icon-title" id="takeout-central-key">Takeout Central</p>
+      </div>
+      <div class="icon-info">
+        <img src="assets/chownow.png" alt="" class="service-icon">
+        <p class="icon-title" id="chow-now-key">Chow Now</p>
+      </div>
+      <div class="icon-info">
+        <img src="assets/doordash-300.png" alt="" class="service-icon">
+        <p class="icon-title" id="door-dash-key">Door Dash</p>
+      </div>
     </div>
-    <div class="icon-info">
-      <img src="assets/kickback.png" alt="" class="service-icon">
-      <p class="icon-title" id="kickbackAVL-key">Kickback AVL</p>
-    </div>
-    <div class="icon-info">
-      <img src="assets/takoutcentral.png" alt="" class="service-icon">
-      <p class="icon-title" id="takeout-central-key">Takeout Central</p>
-    </div>
-    <div class="icon-info">
-      <img src="assets/chownow.png" alt="" class="service-icon">
-      <p class="icon-title" id="chow-now-key">Chow Now</p>
-    </div>
-    <div class="icon-info">
-      <img src="assets/doordash-300.png" alt="" class="service-icon">
-      <p class="icon-title" id="door-dash-key">Door Dash</p>
-    </div>
+
   </div>
 
 </body>
@@ -120,12 +128,14 @@
       if (data['Takeout/ Delivery'].includes('Take')) {
         restaurantIcon4 = document.createElement("img");
         restaurantIcon4.setAttribute('class', 'service-icon');
+        restaurantElement.classList.add('takeout-offered');
         restaurantIcon4.src = "assets/takeout.svg";
         restaurantIconContainer.appendChild(restaurantIcon4);
       }
       if (data['Takeout/ Delivery'].includes('Delivery')) {
         restaurantIcon5 = document.createElement('img');
         restaurantIcon5.setAttribute('class', 'service-icon');
+        restaurantElement.classList.add('delivery-offered');
         restaurantIcon5.src = 'assets/delivery.svg';
         restaurantIconContainer.appendChild(restaurantIcon5);
       }
@@ -183,7 +193,27 @@
       }
 
     });
-  }
+  };
+
+  var deliveryBtn = document.getElementById('show-delivery');
+  var takeoutBtn = document.getElementById('show-takeout');
+  takeoutBtn.addEventListener('click', function() {
+    var restaurants = document.querySelectorAll('.business-card');
+    for (const restaurant of restaurants) {
+      if (!restaurant.classList.contains('takeout-offered')) {
+        restaurant.style.display = 'none';
+      };
+    };
+  });
+  deliveryBtn.addEventListener('click', function() {
+    var restaurants = document.querySelectorAll('.business-card');
+    for (const restaurant of restaurants) {
+      if (!restaurant.classList.contains('delivery-offered')) {
+        restaurant.style.display = 'none';
+      };
+    };
+  });
+
 
   window.addEventListener('DOMContentLoaded', init)
 </script>
